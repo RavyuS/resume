@@ -26,7 +26,7 @@
 %% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
 
 % Change the page layout if you need to
-\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+\geometry{left=1.25cm,right=1.25cm,top=0.5cm,bottom=1.5cm,columnsep=1.2cm}
 
 % The paracol package lets you typeset columns of text in parallel
 \usepackage{paracol}
@@ -64,9 +64,11 @@
 % Change some fonts, if necessary
 \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
 \renewcommand{\personalinfofont}{\footnotesize}
-\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsectionfont}{\Large\rmfamily\bfseries}
 \renewcommand{\cvsubsectionfont}{\large\bfseries}
 
+% Resume formatting overrides(for compactness)
+\input{resources/resume_formatting_overrides.tex}
 
 % Change the bullets for itemize and rating marker
 % for \cvskill if you want to
@@ -88,7 +90,7 @@
   \email{ravyus2@illinois.edu}
   \phone{217-417-8687}
   % \mailaddress{Åddrésş, Street, 00000 Cóuntry}
-  \location{Champaign, IL}\\
+  \location{Champaign, IL}
   % \homepage{www.homepage.com}
   % \twitter{@twitterhandle}
   \linkedin{Ravyu}
@@ -106,15 +108,10 @@
 }
 
 \makecvheader
-%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-% \AtBeginEnvironment{itemize}{\small}
 
-%% Set the left/right column width ratio to 6:4.
-\columnratio{0.6}
+\cvsection{Education}
+\input{content/education/undergrad.tex}
 
-% Start a 2-column paracol. Both the left and right columns will automatically
-% break across pages if things get too long.
-\begin{paracol}{2}
 \cvsection{Work Experience}
 \input{content/work_experience/cs_126_ca.tex}
 
@@ -130,131 +127,9 @@
 
 \input{content/leadership/rsaf_awo.tex}
 
-\divider
-
-\input{content/leadership/uiucssa.tex}
-
-
 \cvsection{Projects}
 
 \input{content/projects/atc_tracker.tex}
 
-\divider
-
-\input{content/projects/robotics_osi.tex}
-
-\divider
-
-\input{content/projects/homeserver.tex}
-
-\medskip
-
-% \cvsection{A Day of My Life}
-
-% % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
-% % \wheelchart{outer radius}{inner radius}{
-% % comma-separated list of value/text width/color/detail}
-% \wheelchart{1.5cm}{0.5cm}{%
-%   6/8em/accent!30/{Sleep,\\beautiful sleep},
-%   3/8em/accent!40/Hopeful novelist by night,
-%   8/8em/accent!60/Daytime job,
-%   2/10em/accent/Sports and relaxation,
-%   5/6em/accent!20/Spending time with family
-% }
-
-% use ONLY \newpage if you want to force a page break for
-% ONLY the current column
-% \newpage
-
-% \cvsection{Publications}
-
-% \nocite{*}
-
-% \printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
-
-% \divider
-
-% \printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
-
-% \divider
-
-% \printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
-
-%% Switch to the right column. This will now automatically move to the second
-%% page if the content is too long.
-\switchcolumn
-
-\cvsection{Education}
-\input{content/education/undergrad.tex}
-\divider
-
-% \cvsection{My Life Philosophy}
-
-% \begin{quote}
-% ``Something smart or heartfelt, preferably in one sentence.''
-% \end{quote}
-
-\cvsection{Notable Awards}
-
-\cvachievement{\faTrophy}{VEX Worlds}{2017 Division Finalist \newline 2016 Division Quarter-Finalist}
-
-\divider
-
-\cvachievement{\faTrophy}{VEX Skills Programming Qualifiers 2016}{2nd in World rankings (out of 4000 teams)}
-% \divider
-
-% \cvachievement{\faHeart}{My little desktop}{By my side since 2011 :)}
-
-
-% \cvachievement{\faTrophy}{DSTA Code_EXP 2020 Finalist}{Robotics \+ Computer Vision hackathon, University category}
-
-% \cvsection{Strengths}
-
-% \cvtag{Hard-working}
-% \cvtag{Eye for detail}\\
-% \cvtag{Motivator \& Leader}
-
-% \divider\smallskip
-
-% \cvtag{C++}
-% \cvtag{Embedded Systems}\\
-% \cvtag{Statistical Analysis}
-
-\input{content/technical_skills.tex}
-
-%% Yeah I didn't spend too much time making all the
-%% spacing consistent... sorry. Use \smallskip, \medskip,
-%% \bigskip, \vpsace etc to make ajustments.
-\medskip
-
 \input{content/coursework.tex}
-
-
-% \cvevent{IB Diploma}{Anglo-Chinese School (Independent)}{Jan 2016 -- Dec 2017}{Singapore}
-% 44 points
-% \divider
-
-% \cvsection{Referees}
-
-% % \cvref{name}{email}{mailing address}
-% \cvref{Prof.\ Alpha Beta}{Institute}{a.beta@university.edu}
-% {Address Line 1\\Address line 2}
-
-% \divider
-
-% \cvref{Prof.\ Gamma Delta}{Institute}{g.delta@university.edu}
-% {Address Line 1\\Address line 2}
-\newpage
-
-\cvsection[]{Other Achievements}
-\cvachievement{\faTrophy}{DSTA Code\_EXP 2020 Finalist}{National mobile app hackathon; University category}
-\cvachievement{\faTrophy}{DSTA TIL 2020 Finalist}{Machine Learning \+ Robotics based hackathon; University category}
-\cvachievement{\faTrophy}{Singapore VEX Nationals 2016}{Tertiary Division Champions \newline Tournament Excellence Award \newline Programming Skills Champions}
-\cvachievement{\faTrophy}{CodeForCorona Hackathon 2020 Finalist}{Open category}
-\cvachievement{\faTrophy}{RoboCup Singapore 2017}{4th Placing}
-\cvachievement{\faSchool}{School Awards}{Certificate of Distinction for contribution in Robotics--2016, 2017 \newline \smallskip Distinguished Service Award for Exemplary Leadership--2017}
-
-
-\end{paracol}
-
-
+\end{document}
