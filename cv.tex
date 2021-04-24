@@ -93,7 +93,7 @@
   % \twitter{@twitterhandle}
   \linkedin{Ravyu}
   \github{RavyuS}
-  \printinfo{\faUniversity}{GPA: 4.0/4.0}
+  \printinfo{\faUniversity}{GPA (cumulative): 4.0/4.0}
   %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
   % \orcid{0000-0000-0000-0000}
   %% You can add your own arbtrary detail with
@@ -116,78 +116,36 @@
 % break across pages if things get too long.
 \begin{paracol}{2}
 \cvsection{Work Experience}
-
-\cvevent{Software Design Studio Course Assistant}{UIUC CS Department}{Jan 2021 -- May 2021}{Champaign, IL}
-\begin{itemize}
-  \item Taught students on programming fundamentals: Object Oriented Programming (C++/Java), black box testing, build automation tools (Maven/Cmake)
-  \item Assessed and graded students code on weekly projects, with an emphasis on strong programming practices (modularity, object decomposition, encapsulation, documentation, testing).
-  \item Hosted weekly Code Review sessions to facillitate discussion on programming practices with students.
-\end{itemize}
+\input{content/work_experience/cs_126_ca.tex}
 
 \divider
 
-\cvevent{Backend Developer}{CloudZen Pte., Ltd.,}{Jan 2018 -- Apr 2018}{Singapore}
-\begin{itemize}
-\item Developed backend infrastructure for the Company’s flagship project—Gamecloud. Setup a Leaderboard database (MongoDB + Redis) that is linked via API endpoints defined in Azure Functions.
-\item Designed network pipeline for latency sensitive applications like game streaming over both cellular and WAN connections. Contributed to the UDP socket programming team. 
-\item Spearheaded virtualization infrastructure setup with focus on performance for gaming. The virtualization infrastructure was built on a KVM-based virtualization platform, with Proxmox used for cluster management.
-
-\end{itemize}
+\input{content/work_experience/cloudzen.tex}
 
 \cvsection{Leadership}
 
-\cvevent{Lead Programmer}{ACS(I) Robotics Club}{Jan 2016 -- Nov 2017}{Singapore}
-
-\begin{itemize}
-  \item Led club as head programmer during competitions (VEX Worlds, RoboCup). Coordinated team efforts with weekly meetings leading up to the competitions, and guided junior members along the way.
-  \item Programmed microcontrollers in various instruction sets (ARM Cortex-M, Atmel AVR) in embedded C and assembly. 
-  \item Designed custom circuit boards, experienced in soldering and EAGLE Design. Also picked up mechanical skills (sawing, drilling) for robot construction.
-\end{itemize}
+\input{content/leadership/acsi_robotics.tex}
 
 \divider
 
-\cvevent{Air Warfare Officer}{Singapore Armed Forces}{Apr 2018 -- Apr 2020}{Singapore}
-\begin{itemize}
-\item Trained as Air Traffic Control (ATC) Officer; in charge of recovering air assets in the event of national emergencies.
-\item Led ATC operations briefs on a weekly and daily basis. Managed communication between various base squadrons during day-to-day operations.
-\item Completed service on April 10th with the rank of Lieutenant.
-\end{itemize}
+\input{content/leadership/rsaf_awo.tex}
 
 \divider
 
-\cvevent{President}{UIUC Singapore Students Association}{Mar 2021 -- }{Champaign, IL}
+\input{content/leadership/uiucssa.tex}
 
 
 \cvsection{Projects}
 
-\cvevent{Air Traffic Control Currency Tracker}{Republic of Singapore Air Force}{Apr 2019 -- Apr 2020}{Singapore}
-\begin{itemize}
-\item Revamped Air Traffic Controller eligibility tracking system in Squadron to ensure controllers’ skills remain current, thus preventing ineligible controllers from controlling. 
-\item The project made use of the Telegram Bot framework for the frontend and Google Apps Script (JavaScript) for the backend, with a focus on high-availability and security to meet operations-sensitive demands.
-\item Gave monthly progress presentations to base commanders, showcasing product demo builds.
-\end{itemize}
+\input{content/projects/atc_tracker.tex}
 
 \divider
 
-\cvevent{Open Source Initiative}{ACS(I) Robotics Club}{Nov 2016 -- Apr 2017}{Singapore}
-Led an initiative to switch to open source robotics platforms for use in Competitions. 
-\medskip
-\begin{itemize}
-  \item Conducted workshops on how to read instruction set manuals for Arduino (AVR) and datasheets for sensors/electronics, with an emphasis on appreciation for open source culture.
-  \item Taught basic computer architecture concepts (ALUs, registers, IO) to junior members.
-  \item Setup and maintained communication channels between the software team, hardware team and part suppliers.
-\end{itemize}
+\input{content/projects/robotics_osi.tex}
 
 \divider
 
-\cvevent{Self-Hosted cloud server}{}{Ongoing}{}
-Converted my desktop to a cloud server for personal use. 
-\medskip
-\begin{itemize}
-  \item Running full LAMP stack with Nextcloud (Cloud storage), Gitea (Git server), SSH, VNC.
-  \item Utilized Linux OS specific tools (network management, bash scripting, systemd, software RAID) to setup the hosting platform.
-  \item Working on secure remote WOL (Wake on LAN) solution.
-\end{itemize}
+\input{content/projects/homeserver.tex}
 
 \medskip
 
@@ -226,7 +184,9 @@ Converted my desktop to a cloud server for personal use.
 %% page if the content is too long.
 \switchcolumn
 
-
+\cvsection{Education}
+\input{content/education/undergrad.tex}
+\divider
 
 % \cvsection{My Life Philosophy}
 
@@ -260,38 +220,14 @@ Converted my desktop to a cloud server for personal use.
 % \cvtag{Embedded Systems}\\
 % \cvtag{Statistical Analysis}
 
-\cvsection{Technical Skills}
-
-\cvskill{C/C++}{4}
-\smallskip
-\cvskill{Java}{3}
-
-\divider
-
-\cvskill{LAMP stack + AWS}{3}
-\smallskip
-\cvskill{React-Native}{2}
-
-\divider
-
-\cvskill{Embedded Systems}{2}
-\smallskip
-\cvskill{Autonomous Systems}{1}
-
-\divider
-\cvskill{TensorFlow/PyTorch}{1}
+\input{content/technical_skills.tex}
 
 %% Yeah I didn't spend too much time making all the
 %% spacing consistent... sorry. Use \smallskip, \medskip,
 %% \bigskip, \vpsace etc to make ajustments.
 \medskip
 
-\cvsection[]{Coursework}
-\cvtag{Discrete Structures}
-\cvtag{Data Structures (C++)}\\
-\cvtag{Computer Architecture}\\
-\cvtag{Programming Studio (Java/C++)}\\
-\cvtag{Calculus I-III}
+\input{content/coursework.tex}
 
 
 % \cvevent{IB Diploma}{Anglo-Chinese School (Independent)}{Jan 2016 -- Dec 2017}{Singapore}
