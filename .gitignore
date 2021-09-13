@@ -5,3 +5,5 @@
 *.run.xml
 *.xmpi
 pdfa.xmpi
+*.fdb_latexmk
+*.fls
