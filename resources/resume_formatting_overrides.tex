@@ -1,16 +1,17 @@
 % Formatting overrides for compactness
 \renewcommand{\cvsection}[2][]{
-  \bigskip%
+  \medskip%
   \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
   {\color{heading}\cvsectionfont\MakeUppercase{#2}}\\[-1.5ex]%
   {\color{headingrule}\rule{\linewidth}{1pt}\par}
   % \divider
 }
 \renewcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1\par}
-  \smallskip\normalsize
+  \smallskip
+  {\large\color{emphasis}#1}
+  \normalsize
   \ifstrequal{#2}{}{}{
-  \textbf{\color{accent}#2}
+  \textbf{\color{accent} --- #2}
   }
   \ifstrequal{#3}{}{}{
     % \small\makebox[0.5\linewidth\hfill][l]{\faCalendar~#3}
@@ -20,3 +21,12 @@
   \par\smallskip\normalsize
 }
 \renewcommand{\divider}{\textcolor{body!30}{\hdashrule{\linewidth}{0.6pt}{0.5ex}}}
+
+\newenvironment{cvitemize}
+{\begin{itemize}
+  \small
+  \setlength{\itemsep}{0pt}
+  % \setlength{\parskip}{-2pt}
+  % \setlength{\topsep}{-2pt}
+  }
+{\end{itemize}}
