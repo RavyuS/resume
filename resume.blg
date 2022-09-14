@@ -1,5 +1,0 @@
-[0] Config.pm:311> INFO - This is Biber 2.16
-[0] Config.pm:314> INFO - Logfile is 'resume.blg'
-[59] biber:340> INFO - === Thu Aug  4, 2022, 21:29:22
-[72] Biber.pm:415> INFO - Reading 'resume.bcf'
-[135] Utils.pm:395> WARN - No data sources defined!
