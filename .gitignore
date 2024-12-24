@@ -7,3 +7,6 @@
 pdfa.xmpi
 *.fdb_latexmk
 *.fls
+
+archive/
+.DS_Store

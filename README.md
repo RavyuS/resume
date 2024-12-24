@@ -11,7 +11,7 @@ I create a new `.tex` file for each item/experience in `content/`. Take a look a
 
 ### Tips
 - Fit everything into one page
-- I generally use different items for different areas of focus (ML, Systems, Computer Vision, etc.,). This is especially useful if you can't fit everything into one page (lucky you)
+- I generally use different items for different areas of focus (ML, Systems, Computer Vision, etc.,). This is especially useful if you can't fit everything into one page (lucky you)   
 
 ## Compiling Resume
 Compile with `pdflatex resume.tex`
